@@ -8,19 +8,51 @@
 </head>
 <body>
   <div id="container">
-
+    
     <div class="header">
-      <div class="back-button"></div>
-      <div class="logo"></div>
-      <div class="sign-in-button"></div>
+      <div class="back-button">Go back</div>
+      <div class="logo">Here is logo</div>
+      <div class="sign-in-button">Sign in</div>
+    </div>
+
+    <div class="header-order">
+        <section class="order-section">
+            <div class="left">
+                <h2><i class="fa fa-clipboard order-symbol" aria-hidden="true"></i>Your order</h2>
+                <table>
+                  <tr>
+                        <th>Items</th>
+                      <th>Details</th>
+                      <th>Price</th>
+                      <th>Delivery</th>
+                    </tr>
+                  <tr>
+                        <td>2 documents</td>
+                        <td>2 languages</td>
+                        <td value='USD:696.00'>$ 696.00</td>
+                        <td>48 hours*</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right">
+                <address class='address-block'>
+                    <a href="tel:+971(0)555 555">+971(0)555 555</a>
+                    <a href="mailto:help@qtest.com">help@qtest.com</a>
+                </address>
+            </div>
+        </section>
+      
     </div>
 
     <div class="form-wrapper">
-
+      <form action="send()">
+        
+      </form>
     </div>
-    <footer class="footer">
-      
-    </footer>
+
+
+    <footer class="footer"></footer>
+    <link rel="stylesheet" href="css/styles.min.css">
   </div>
 </body>
 </html>

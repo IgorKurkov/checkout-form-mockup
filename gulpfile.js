@@ -2,6 +2,7 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync'),
     notify      = require('gulp-notify'),
     less        = require('gulp-less'),
+    sass        = require('gulp-sass'),
     path        = require('path'),
     cssmin      = require('gulp-cssmin'),
     rename      = require('gulp-rename'),
@@ -23,8 +24,8 @@ gulp.task("reload", () => {
 });
 
 gulp.task('less', () => {
-  // return gulp.src('app/less/**/*.less')
-  return gulp.src('app/less/styles.less')
+  return gulp.src('app/less/**/*.less')
+  // return gulp.src('app/less/styles.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }).on("error", notify.onError()))
@@ -36,10 +37,14 @@ gulp.task('less', () => {
 
 gulp.task("default", ["less", "start-server"], () => {
   gulp.watch('app/css/**/*.css', ["reload"]);
+  // gulp.watch('app/sass/**/*.sass', ["sass", "reload"]);
   gulp.watch('app/less/**/*.less', ["less", "reload"]);
   gulp.watch('app/js/**/*.js', ["reload"]);
   gulp.watch('app/**/*.html', ["reload"]);
 });
+
+
+
 
 ///build
 gulp.task('build-html', function() {

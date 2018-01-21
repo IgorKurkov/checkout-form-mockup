@@ -1,0 +1,183 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.otf") format("otf");
+  /* url("../fonts/OpenSans-Regular-webfont.woff") format("woff"); */
+}
+body {
+  background-color: #9b9b9c;
+  font-family: ProximaNova;
+}
+#container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.header {
+  background-color: #9b9b9c;
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+.header .back-button {
+  border: 1px solid black;
+  width: 40px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+.header .logo {
+  border: 1px solid black;
+  position: absolute;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  right: 0;
+  top: 40px;
+  background-color: red;
+}
+.header .sign-in-button {
+  border: 1px solid black;
+  position: absolute;
+  width: 40px;
+  top: 40px;
+  right: 40px;
+}
+.order-section {
+  display: flex;
+  width: 100%;
+}
+.order-section > .left {
+  flex-grow: 100%;
+}
+.order-section > .right {
+  width: 400px;
+}
