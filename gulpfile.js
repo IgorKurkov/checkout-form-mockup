@@ -24,8 +24,8 @@ gulp.task("reload", () => {
 });
 
 gulp.task('less', () => {
-  return gulp.src('app/less/**/*.less')
-  // return gulp.src('app/less/styles.less')
+  // return gulp.src('app/less/**/*.less')
+  return gulp.src('app/less/styles.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }).on("error", notify.onError()))
