@@ -1,77 +1,27 @@
-@import (less) '_resetCss.css';
-@import '_vars';
-@import '_mixins';
+@import (less) 'inc/_resetCss.css';
+@import 'inc/_vars';
+@import 'inc/_mixins';
+@import 'inc/_fonts';
 
- @font-face {
-  font-family: "ProximaNova";
-  src: url("../fonts/ProximaNova/ProximaNova-Bold.otf") format("otf");
-         /* url("../fonts/OpenSans-Regular-webfont.woff") format("woff"); */
- }
 
 body {
   background-color: @body-color;
   padding-top: 4rem;
   font-family: 'ProximaNova';
+  color : @font-color;
+}
+
+.button {
+  .button-regular;
 }
 
 #container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   background-color: #fff;
-}
-.header {
-  background-color: @body-color;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 
-  .back-button {
-    .uppercase;
-    .button;
-  }
-  .logo{
-    /* https://codepen.io/valfom/pen/rpPaeO */
-    margin: auto;
-    border: 18px solid #dadde7;
-    box-sizing: border-box;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    box-shadow: inset 0px 0px 0px 18px @body-color;
-    background-color: #dadde7;
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      right: -6px;
-      width: 0;
-      height: 0;
-      transform: rotate(45deg); 
-      border-style: solid;
-      border-width: 10px 0 10px 20px;
-      border-color: transparent transparent transparent @body-color;
-    }
-  }
-  .sign-in-button {
-    .uppercase;
-    .button;
+  @import '_header';
+  @import '_form';
+  
 
-  }
-}
-
-.order-section {
-  display: flex;
-  width: 100%;
-}
-
-.order-section > .left {
-  flex-grow: 100%;
-}
-
-.order-section > .right {
-  width: 400px;
 }

@@ -129,7 +129,41 @@ table {
 .uppercase {
   text-transform: uppercase;
 }
+.button-regular {
+  background-color: transparent;
+  font-family: 'ProximaNova';
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  border: 1px solid #C9D0E1;
+  border-radius: 3px;
+  padding: 17px 35px;
+  color: #A5ABC6;
+  font-size: 14px;
+  text-align: center;
+}
+.button-regular .fa {
+  font-size: 1.2em;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.otf") format("otf");
+  /* url("../fonts/OpenSans-Regular-webfont.woff") format("woff"); */
+}
+body {
+  background-color: #eceef4;
+  padding-top: 4rem;
+  font-family: 'ProximaNova';
+  color: #A5ABC5;
+}
 .button {
+  background-color: transparent;
+  font-family: 'ProximaNova';
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
   position: relative;
   font-weight: 500;
   border: 1px solid #C9D0E1;
@@ -142,22 +176,13 @@ table {
 .button .fa {
   font-size: 1.2em;
 }
-@font-face {
-  font-family: "ProximaNova";
-  src: url("../fonts/ProximaNova/ProximaNova-Bold.otf") format("otf");
-  /* url("../fonts/OpenSans-Regular-webfont.woff") format("woff"); */
-}
-body {
-  background-color: #eceef4;
-  padding-top: 4rem;
-  font-family: 'ProximaNova';
-}
 #container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   background-color: #fff;
 }
-.header {
+#container header nav {
+  padding-bottom: 65px;
   background-color: #eceef4;
   width: 100%;
   height: 100px;
@@ -166,8 +191,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.header .back-button {
+#container header nav .back,
+#container header nav .sign {
+  background-color: transparent;
+  font-family: 'ProximaNova';
+  display: inline-block;
   text-transform: uppercase;
+  text-decoration: none;
   position: relative;
   font-weight: 500;
   border: 1px solid #C9D0E1;
@@ -177,54 +207,25 @@ body {
   font-size: 14px;
   text-align: center;
 }
-.header .back-button .fa {
+#container header nav .back .fa,
+#container header nav .sign .fa {
   font-size: 1.2em;
 }
-.header .logo {
-  /* https://codepen.io/valfom/pen/rpPaeO */
-  margin: auto;
-  border: 18px solid #dadde7;
-  box-sizing: border-box;
-  height: 100px;
+#container header nav .logo img {
+  opacity: .1;
   width: 100px;
-  border-radius: 50%;
-  box-shadow: inset 0px 0px 0px 18px #eceef4;
-  background-color: #dadde7;
-  position: relative;
+  height: auto;
 }
-.header .logo::before {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  right: -6px;
-  width: 0;
-  height: 0;
-  transform: rotate(45deg);
-  border-style: solid;
-  border-width: 10px 0 10px 20px;
-  border-color: transparent transparent transparent #eceef4;
+#container form.main-form {
+  border: 1px solid #D6DCE8;
 }
-.header .sign-in-button {
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 500;
-  border: 1px solid #C9D0E1;
-  border-radius: 3px;
-  padding: 17px 35px;
-  color: #A5ABC6;
-  font-size: 14px;
-  text-align: center;
-}
-.header .sign-in-button .fa {
-  font-size: 1.2em;
-}
-.order-section {
+#container .order-section {
   display: flex;
   width: 100%;
 }
-.order-section > .left {
+#container .order-section .left {
   flex-grow: 100%;
 }
-.order-section > .right {
+#container .order-section .right {
   width: 400px;
 }

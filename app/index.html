@@ -10,16 +10,18 @@
 </head>
 <body>
   <div id="container">
-    
-    <div class="header">
-      <div class="back-button"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> &#8194; Go back</div>
-      <div class="logo"></div>
-      <div class="sign-in-button"><i class="fa fa-user" aria-hidden="true"></i> &#8194; Sign in</div>
-    </div>
 
-    <div class="header-order">
+    <header>
+        <nav>
+          <a class="back button" href="#"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> &#8194; Go back</a>
+          <a class="logo" href="/"><img src="img/logo.png" alt="logo"></a>
+          <a class="sign button" href="#"><i class="fa fa-user" aria-hidden="true"></i> &#8194; Sign in</a>
+        </nav>
+    </header>
+
+    <main>
         <section class="order-section">
-            <div class="left">
+            <section class="order-summary left">
                 <h2><i class="fa fa-clipboard order-symbol" aria-hidden="true"></i>  Your order</h2>
                 <table>
                   <tr>
@@ -35,16 +37,18 @@
                         <td>48 hours*</td>
                     </tr>
                 </table>
-            </div>
-            <div class="right">
+                <button class=" button" type="submit">Place order</a>
+                <button class=" button">Print a quote</a>
+            </section>
+            <section class="address right">
                 <address class='address-block'>
                     <a href="tel:+971(0)555 555">+971(0)555 555</a>
                     <a href="mailto:help@qtest.com">help@qtest.com</a>
                 </address>
-            </div>
+            </section>
         </section>
       
-    </div>
+    </main>
 
     <div class="form-wrapper">
       <form action="send()">
