@@ -134,6 +134,7 @@ table {
   font-family: 'ProximaNova';
   display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 0.01em;
   text-decoration: none;
   position: relative;
   font-weight: 500;
@@ -146,6 +147,18 @@ table {
 }
 .button-regular .fa {
   font-size: 1.2em;
+}
+.title {
+  position: absolute;
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.title .fa {
+  font-size: 20px;
+  margin-right: 10px;
 }
 @font-face {
   font-family: "ProximaNova";
@@ -163,6 +176,7 @@ body {
   font-family: 'ProximaNova';
   display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 0.01em;
   text-decoration: none;
   position: relative;
   font-weight: 500;
@@ -197,6 +211,7 @@ body {
   font-family: 'ProximaNova';
   display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 0.01em;
   text-decoration: none;
   position: relative;
   font-weight: 500;
@@ -216,16 +231,108 @@ body {
   width: 100px;
   height: auto;
 }
-#container form.main-form {
-  border: 1px solid #D6DCE8;
-}
-#container .order-section {
+#container main .order-section {
+  position: relative;
   display: flex;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
+}
+#container main .order-section .order-summary.left {
+  padding: 28px 0px 0px 38px;
+  position: relative;
+  width: 70%;
+  flex-grow: 100;
+  display: flex;
+  border-right: 1px solid #D6DCE8;
+}
+#container main .order-section .order-summary.left h3.section-title {
+  position: absolute;
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+#container main .order-section .order-summary.left h3.section-title .fa {
+  font-size: 20px;
+  margin-right: 10px;
+}
+#container main .order-section .order-summary.left table {
+  width: 80%;
+  padding: 53px 0 0 35px;
+  text-align: left;
+  top: 53px;
+  left: 35px;
+  position: relative;
+  align-items: space-between;
+}
+#container main .order-section .order-summary.left table tr {
   width: 100%;
+  display: flex;
+  align-items: space-between;
 }
-#container .order-section .left {
-  flex-grow: 100%;
+#container main .order-section .order-summary.left table tr th {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 21%;
 }
-#container .order-section .right {
-  width: 400px;
+#container main .order-section .order-summary.left table tr td {
+  padding-top: 11px;
+  font-size: 13px;
+  width: 21%;
+}
+#container main .order-section .order-summary.left .actions-right {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+#container main .order-section .order-summary.left .actions-right .button {
+  min-width: 180px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+#container main .order-section .order-summary.left .actions-right .btn-action {
+  background-color: #5FCAC6;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+#container main .order-section .address.right {
+  padding: 28px 0 0 38px;
+  width: 30%;
+}
+#container main .order-section .address.right p {
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+#container main .order-section .address.right h3.section-title {
+  position: absolute;
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 0.7em;
+  letter-spacing: 0.01em;
+}
+#container main .order-section .address.right h3.section-title .fa {
+  font-size: 20px;
+  margin-right: 10px;
+}
+#container main .order-section .address.right address {
+  padding: 30px;
+  font-size: 12px;
+}
+#container main .order-section .address.right address a {
+  display: inline-block;
+  padding-top: 13px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #A5ABC5;
+  margin-right: 15px;
+  font-weight: 500;
 }

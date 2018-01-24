@@ -20,41 +20,50 @@
     </header>
 
     <main>
-        <section class="order-section">
-            <section class="order-summary left">
-                <h2><i class="fa fa-clipboard order-symbol" aria-hidden="true"></i>  Your order</h2>
-                <table>
-                  <tr>
-                        <th>Items</th>
-                      <th>Details</th>
-                      <th>Price</th>
-                      <th>Delivery</th>
-                    </tr>
-                  <tr>
-                        <td>2 documents</td>
-                        <td>2 languages</td>
-                        <td value='USD:696.00'>$ 696.00</td>
-                        <td>48 hours*</td>
-                    </tr>
-                </table>
-                <button class=" button" type="submit">Place order</a>
-                <button class=" button">Print a quote</a>
-            </section>
-            <section class="address right">
-                <address class='address-block'>
-                    <a href="tel:+971(0)555 555">+971(0)555 555</a>
-                    <a href="mailto:help@qtest.com">help@qtest.com</a>
-                </address>
-            </section>
+      <section class="order-section">
+        <section class="order-summary left">
+          <h3 class="section-title"><i class="fa fa-file" aria-hidden="true"></i>
+            Your order
+          </h3>
+          <table>
+            <tr>
+              <th>Items</th>
+              <th>Details</th>
+              <th>Price</th>
+              <th>Delivery</th>
+            </tr>
+            <tr>
+              <td>2 documents</td>
+              <td>2 languages</td>
+              <td value='USD:696.00'>$ 696.00</td>
+              <td>48 hours*</td>
+            </tr>
+          </table>
+          <div class="actions-right">
+              <button class="btn-action button" type="submit">Place order</a>
+              <button class="button">Print a quote</a>
+          </div>
         </section>
-      
+        <section class="address right">
+            <h3 class="section-title">
+                <i class="fa fa-life-ring icon-offset" aria-hidden="true"></i>
+                Help center
+              </h3>
+            <address>
+                <p>If you need assistance while placing your order, contact one of our beloved Project Managers by phone or email.</p>
+                <a href="tel:+971(0)555 555">+971(0)555 555</a>
+                <a href="mailto:help@qtest.com">help@qtest.com</a>
+            </address>
+        </section>
+      </section>
+      <div class="form-container">
+          <form id="main-form" action="send()">
+            
+          </form>
+        </div>
     </main>
 
-    <div class="form-wrapper">
-      <form action="send()">
-        
-      </form>
-    </div>
+    
 
 
     <footer class="footer"></footer>

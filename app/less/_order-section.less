@@ -1,0 +1,91 @@
+.order-section {
+  position: relative;
+  display: flex;
+  border: 1px solid @border-color;
+  border-radius: 3px;
+
+  .order-summary.left {
+    padding: 28px 0px 0px 38px;
+    position: relative;
+    width: 70%;
+    flex-grow: 100;
+    display: flex;
+    h3.section-title {
+      .title
+    }
+    table {
+      width: 80%;
+      padding: 53px 0 0 35px;
+      text-align: left;
+      top: 53px;
+      left: 35px;
+      position: relative;
+      align-items: space-between;
+      tr { 
+        width: 100%;  
+        display: flex;
+        align-items: space-between;
+        th {
+          font-size: 12px;
+          letter-spacing: 0.08em;
+          font-weight: 600;
+          text-transform: uppercase;
+          width: 21%;
+        }
+        td {
+          padding-top: 11px;
+          font-size: 13px;
+          width: 21%;
+        }
+      }
+    }
+    .actions-right {
+      width: 30%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 30px;
+      
+      .button {
+        min-width: 180px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+      }
+      .btn-action {
+        background-color: @action-color;
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+      }
+    }
+    border-right: 1px solid @border-color;
+  }
+  
+  .address.right {
+    padding: 28px 0 0 38px;
+    width: 30%;
+    p {
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+    }
+    h3.section-title {
+      .title;
+      font-size: 0.7em;
+      letter-spacing: 0.01em;
+    }
+    address {
+      padding: 30px;
+      font-size: 12px;
+      a {
+        display: inline-block;
+        padding-top: 13px;
+        font-size: 14px;
+        text-decoration: none;
+        color: @font-color;
+        margin-right: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+

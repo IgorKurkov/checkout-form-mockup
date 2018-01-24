@@ -40,7 +40,7 @@ gulp.task("default", ["less", "start-server"], () => {
   // gulp.watch('app/sass/**/*.sass', ["sass", "reload"]);
   gulp.watch('app/less/**/*.less', ["less", "reload"]);
   gulp.watch('app/js/**/*.js', ["reload"]);
-  gulp.watch('app/**/*.html', ["reload"]);
+  gulp.watch('app/*.html', browserSync.reload);
 });
 
 
