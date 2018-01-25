@@ -20,9 +20,13 @@ body {
   margin: 0 auto;
   background-color: #fff;
 
+
+
   @import '_header';
 
   main {
+    border: 1px solid @border-color;
+    border-radius: 3px;
     @import '_order-section';
     @import '_form';
   }

@@ -58,7 +58,38 @@
       </section>
       <div class="form-container">
           <form id="main-form" action="send()">
-            
+
+            <section class="selectable">
+              <h1 class="main-title">Select what you want to translate</h1>
+
+              <fieldset>
+                <div class="flex-container">
+                    <div class="select-type">
+                        <input required type="radio" name="select-type" id="type1" value="website">
+                        <label for="type1" class="select-wrapper">
+                          <img src="img/website.png" alt="">
+                          <span>Website</span>
+                        </label>
+                      </div>
+                      <div class="select-type">
+                          <input required  type="radio" name="select-type" id="type2" value="website"/>
+                          <label for="type2" class="select-wrapper">
+                            <img src="img/docs.png" alt="">
+                            <span>Documents</span>
+                          </label>
+                        </div>
+                        <div class="select-type">
+                            <input  required  type="radio" name="select-type" id="type3" value="website"/>
+                            <label for="type3" class="select-wrapper">
+                              <img src="img/account.png" alt="">
+                              <span>Social account</span>
+                            </label>
+                          </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+
           </form>
         </div>
     </main>
