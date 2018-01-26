@@ -22,7 +22,7 @@
     <main>
       <section class="order-section">
         <section class="order-summary left">
-          <h3 class="section-title"><i class="fa fa-file" aria-hidden="true"></i>
+          <h3 class="order-title"><i class="fa fa-file" aria-hidden="true"></i>
             Your order
           </h3>
           <table>
@@ -61,7 +61,6 @@
 
             <section class="selectable">
               <h1 class="main-title">Select what you want to translate</h1>
-
               <fieldset>
                 <div class="flex-container">
                     <div class="select-type">
@@ -86,9 +85,62 @@
                             </label>
                           </div>
                   </div>
-                </div>
+                
               </fieldset>
             </section>
+              <div class="counter-container">
+                <section class="uploadable">
+                  <fieldset>
+                    <div class="flex-container">
+                      <h2 class="section-title">Upload your documents
+                        <span class="section-title-filetypes">(Doc, Docx, Text, PDF, Markdown)</span>
+                     </h2>
+
+                      <div class="upload-btn-wrapper">
+                        <button class="button upload">
+                            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload a new file
+                        </button>
+                        <input type="file" name="document" id="upload"/>
+                      </div>
+                    <div class="table-wrapper">
+                      <table class="uploaded-files-table">
+                        <thead>
+                          <tr>
+                            <th>File name</th>
+                            <th>File size</th>
+                            <th>Number of words</th>
+                            <th>remove</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><i class="fa fa-file-text" aria-hidden="true"></i> business_operations.docx</td>
+                            <td>78kb</td>
+                            <td>842</td>
+                            <td>
+                              <button type="button" class="remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><i class="fa fa-file-text" aria-hidden="true"></i> business_financial.docx</td>
+                            <td>26kb</td>
+                            <td>2,326</td>
+                            <td>
+                              <button type="button" class="remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </fieldset>
+              </section>
+            </div>
+          </div>
 
           </form>
         </div>

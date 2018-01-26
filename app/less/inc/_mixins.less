@@ -1,3 +1,5 @@
+@import '_keyframes';
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -10,14 +12,48 @@
   text-decoration: none;
   position: relative;
   font-weight: 500;
-  border: 1px solid #C9D0E1;
+  border: 1px solid @border-color;
   border-radius: 3px;
   padding: 17px 35px;
-  color: #A5ABC6;
+  color: @font-color;
   font-size: 14px;
   text-align: center;
   .fa {
     font-size: 1.2em;
+  }
+}
+
+.button-icons {
+  border: none;
+  background-color: transparent;
+  color: @font-color;
+  position: relative;
+  outline: 0;
+  //https://codepen.io/doggard/pen/dXYzjW
+  &:before {
+    content: '';
+    background-color: @sky-blue;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(0.001, 0.001);
+  }
+  .fa {
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+  &:hover {
+    color: darken(@font-color, 50%);
+  }
+
+  &:focus {
+    &:before {
+      animation: effect_dylan 0.8s ease-out;
+    }
   }
 }
 .title {
