@@ -1,0 +1,83 @@
+section.urgent {
+
+  //https://jsfiddle.net/acwa07ma/
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 400px;
+    margin: 75px 0 0 15px;
+    position: relative;
+    outline: 0;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 20px;
+    background: orange;
+    margin-top:-6px;
+    z-index: 2;
+    position: relative;
+  }
+  .grey-circle {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background: rgb(134, 134, 134);
+    position: absolute;
+    margin: 1px 3px 0 3px;
+    z-index: 1;
+  }
+
+  input[type=range]::after {
+    .grey-circle;
+  }
+  
+  input[type=range]:before {
+    .grey-circle;
+    right: 0;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    width: 300px;
+    background: rgb(201, 201, 201);
+    height: 10px;
+    border-radius: 10px;
+  }
+
+  .description {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    .text-upper-bold-13;
+    margin-top: 13px;
+    .active {
+      color: orange;
+    }
+    margin-bottom: 60px;
+  }
+
+  legend.average-info {
+    width: 460px;
+    border: 1px solid @border-color;
+    border-radius: 3px;
+    padding: 25px;
+    font-size: 13px;
+    line-height: 1.6;
+    h3 {
+      .text-upper-bold-13;
+      padding-bottom: 20px;
+      .fa {
+        margin-right: 10px;
+        font-size: 2em;
+      }
+    }
+    span {
+      .text-upper-bold-13;
+      color: orange;
+    }
+  }
+}

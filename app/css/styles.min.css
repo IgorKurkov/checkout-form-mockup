@@ -143,23 +143,52 @@ table {
 .uppercase {
   text-transform: uppercase;
 }
+.text-upper-bold-13 {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+}
+.btn-action {
+  background-color: #5FCAC6;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
 .button-regular {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
-  text-transform: uppercase;
   letter-spacing: 0.01em;
   text-decoration: none;
-  position: relative;
-  font-weight: 500;
   border: 1px solid #D6DCE8;
   border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
-  font-size: 14px;
   text-align: center;
 }
 .button-regular .fa {
+  font-size: 1.2em;
+}
+.button-gray {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: transparent;
+  font-family: 'ProximaNova';
+  display: inline-block;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
+  padding: 17px 35px;
+  color: #A5ABC5;
+  text-align: center;
+  background-color: #F7F7FA;
+}
+.button-gray .fa {
   font-size: 1.2em;
 }
 .button-icons {
@@ -188,8 +217,8 @@ table {
 .button-icons:hover {
   color: #2a2e41;
 }
-.button-icons:focus:before {
-  animation: effect_dylan 0.8s ease-out;
+.button-icons:active:before {
+  animation: effect_dylan 0.4s ease-out;
 }
 .title {
   position: absolute;
@@ -203,6 +232,34 @@ table {
   font-size: 20px;
   margin-right: 10px;
 }
+.countify-title {
+  position: relative;
+  padding-left: 35px;
+  letter-spacing: -0.02em;
+  font-size: 25px;
+}
+.countify-title:before,
+.countify-title:after {
+  position: absolute;
+  left: -35px;
+  top: -8px;
+}
+.countify-title:before {
+  counter-increment: section;
+  content: counter(section);
+  left: -16px;
+  top: 7px;
+  color: #A5ABC5;
+  font-size: 17px;
+  font-weight: 500;
+}
+.countify-title:after {
+  content: '';
+  width: 42px;
+  height: 42px;
+  border: 1px solid #A5ABC5;
+  border-radius: 50%;
+}
 @font-face {
   font-family: "ProximaNova";
   src: url("../fonts/ProximaNova/ProximaNova-Bold.otf") format("otf");
@@ -215,20 +272,24 @@ body {
   color: #A5ABC5;
   counter-reset: section;
 }
+.logo img {
+  opacity: .1;
+  width: 100px;
+  height: auto;
+}
 .button {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
-  text-transform: uppercase;
   letter-spacing: 0.01em;
   text-decoration: none;
-  position: relative;
-  font-weight: 500;
   border: 1px solid #D6DCE8;
   border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
-  font-size: 14px;
   text-align: center;
 }
 .button .fa {
@@ -251,29 +312,23 @@ body {
 }
 #container header nav .back,
 #container header nav .sign {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
-  text-transform: uppercase;
   letter-spacing: 0.01em;
   text-decoration: none;
-  position: relative;
-  font-weight: 500;
   border: 1px solid #D6DCE8;
   border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
-  font-size: 14px;
   text-align: center;
 }
 #container header nav .back .fa,
 #container header nav .sign .fa {
   font-size: 1.2em;
-}
-#container header nav .logo img {
-  opacity: .1;
-  width: 100px;
-  height: auto;
 }
 #container main {
   border: 1px solid #D6DCE8;
@@ -319,10 +374,10 @@ body {
   align-items: space-between;
 }
 #container main .order-section .order-summary.left table tr th {
-  font-size: 12px;
   letter-spacing: 0.08em;
-  font-weight: 600;
   text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
   width: 21%;
 }
 #container main .order-section .order-summary.left table tr td {
@@ -342,12 +397,6 @@ body {
   font-size: 12px;
   letter-spacing: 0.08em;
 }
-#container main .order-section .order-summary.left .actions-right .btn-action {
-  background-color: #5FCAC6;
-  color: #fff;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-}
 #container main .order-section .address.right {
   padding: 28px 0 0 38px;
   width: 30%;
@@ -363,7 +412,7 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.03em;
-  font-size: 0.7em;
+  font-size: 0.8em;
   letter-spacing: 0.01em;
 }
 #container main .order-section .address.right h3.section-title .fa {
@@ -382,6 +431,69 @@ body {
   color: #A5ABC5;
   margin-right: 15px;
   font-weight: 500;
+}
+#container main button.remove {
+  border: none;
+  background-color: transparent;
+  color: #A5ABC5;
+  position: relative;
+  outline: 0;
+}
+#container main button.remove:before {
+  content: '';
+  background-color: #76A7E1;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale(0.001, 0.001);
+}
+#container main button.remove .fa {
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+#container main button.remove:hover {
+  color: #2a2e41;
+}
+#container main button.remove:active:before {
+  animation: effect_dylan 0.4s ease-out;
+}
+#container main h2.section-title {
+  position: relative;
+  padding-left: 35px;
+  letter-spacing: -0.02em;
+  font-size: 25px;
+}
+#container main h2.section-title:before,
+#container main h2.section-title:after {
+  position: absolute;
+  left: -35px;
+  top: -8px;
+}
+#container main h2.section-title:before {
+  counter-increment: section;
+  content: counter(section);
+  left: -16px;
+  top: 7px;
+  color: #A5ABC5;
+  font-size: 17px;
+  font-weight: 500;
+}
+#container main h2.section-title:after {
+  content: '';
+  width: 42px;
+  height: 42px;
+  border: 1px solid #A5ABC5;
+  border-radius: 50%;
+}
+#container main .btn-action {
+  background-color: #5FCAC6;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.08em;
 }
 #container main .form-container {
   position: relative;
@@ -450,98 +562,70 @@ body {
   font-size: 17px;
   font-weight: 500;
 }
-#container main .form-container .counter-container section.uploadable {
+#container main .form-container section.uploadable {
   padding: 55px 0;
   /* https://codepen.io/adambene/pen/xRWrXN */
 }
-#container main .form-container .counter-container section.uploadable h2.section-title {
-  position: relative;
-  padding-left: 35px;
-  letter-spacing: -0.02em;
-  font-size: 25px;
-}
-#container main .form-container .counter-container section.uploadable h2.section-title:before,
-#container main .form-container .counter-container section.uploadable h2.section-title:after {
-  position: absolute;
-  left: -35px;
-  top: -8px;
-}
-#container main .form-container .counter-container section.uploadable h2.section-title:before {
-  counter-increment: section;
-  content: counter(section);
-  left: -16px;
-  top: 7px;
-  color: #A5ABC5;
-  font-size: 17px;
-  font-weight: 500;
-}
-#container main .form-container .counter-container section.uploadable h2.section-title:after {
-  content: '';
-  width: 42px;
-  height: 42px;
-  border: 1px solid #A5ABC5;
-  border-radius: 50%;
-}
-#container main .form-container .counter-container section.uploadable h2.section-title .section-title-filetypes {
+#container main .form-container section.uploadable .section-title-filetypes {
   font-size: 13px;
   margin-left: 10px;
 }
-#container main .form-container .counter-container section.uploadable .upload-btn-wrapper {
+#container main .form-container section.uploadable .upload-btn-wrapper {
   padding: 52px 0 0 35px;
   position: relative;
   overflow: hidden;
   display: inline-block;
 }
-#container main .form-container .counter-container section.uploadable .upload-btn-wrapper button.upload {
+#container main .form-container section.uploadable .upload-btn-wrapper button.upload {
   background-color: #F7F7FA;
   display: block;
   text-transform: inherit;
   font-size: 17px;
   letter-spacing: -0.04em;
 }
-#container main .form-container .counter-container section.uploadable .upload-btn-wrapper button.upload .fa {
+#container main .form-container section.uploadable .upload-btn-wrapper button.upload .fa {
   margin-right: 12px;
 }
-#container main .form-container .counter-container section.uploadable .upload-btn-wrapper input#upload {
+#container main .form-container section.uploadable .upload-btn-wrapper input#upload {
   font-size: 100px;
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
 }
-#container main .form-container .counter-container section.uploadable .table-wrapper {
+#container main .form-container section.uploadable .table-wrapper {
   border: 1px solid #D6DCE8;
   border-radius: 5px;
   margin: 35px 10px 0 35px;
 }
-#container main .form-container .counter-container section.uploadable table.uploaded-files-table {
+#container main .form-container section.uploadable table.uploaded-files-table {
   width: 95%;
   margin: 30px 45px 25px 45px;
 }
-#container main .form-container .counter-container section.uploadable table.uploaded-files-table thead tr {
+#container main .form-container section.uploadable table.uploaded-files-table thead tr {
   text-align: left;
 }
-#container main .form-container .counter-container section.uploadable table.uploaded-files-table thead tr th {
+#container main .form-container section.uploadable table.uploaded-files-table thead tr th {
   padding: 0 0 12px 0;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.08em;
 }
-#container main .form-container .counter-container section.uploadable table.uploaded-files-table tbody tr td {
+#container main .form-container section.uploadable table.uploaded-files-table tbody tr td {
   padding: 8px 0;
 }
-#container main .form-container .counter-container section.uploadable table.uploaded-files-table tbody tr td .fa {
+#container main .form-container section.uploadable table.uploaded-files-table tbody tr td .fa {
   margin-right: 19px;
 }
-#container main .form-container .counter-container section.uploadable table.uploaded-files-table tbody tr td button.remove {
+#container main .form-container section.uploadable table.uploaded-files-table tbody tr td button.remove {
   border: none;
   background-color: transparent;
   color: #A5ABC5;
   position: relative;
   outline: 0;
 }
-#container main .form-container .counter-container section.uploadable table.uploaded-files-table tbody tr td button.remove:before {
+#container main .form-container section.uploadable table.uploaded-files-table tbody tr td button.remove:before {
   content: '';
   background-color: #76A7E1;
   border-radius: 50%;
@@ -553,13 +637,532 @@ body {
   left: 0;
   transform: scale(0.001, 0.001);
 }
-#container main .form-container .counter-container section.uploadable table.uploaded-files-table tbody tr td button.remove .fa {
+#container main .form-container section.uploadable table.uploaded-files-table tbody tr td button.remove .fa {
   margin: 0 auto;
   font-size: 1.2em;
 }
-#container main .form-container .counter-container section.uploadable table.uploaded-files-table tbody tr td button.remove:hover {
+#container main .form-container section.uploadable table.uploaded-files-table tbody tr td button.remove:hover {
   color: #2a2e41;
 }
-#container main .form-container .counter-container section.uploadable table.uploaded-files-table tbody tr td button.remove:focus:before {
-  animation: effect_dylan 0.8s ease-out;
+#container main .form-container section.uploadable table.uploaded-files-table tbody tr td button.remove:active:before {
+  animation: effect_dylan 0.4s ease-out;
+}
+#container main .form-container section.languages {
+  margin-top: 55px;
+}
+#container main .form-container section.languages h2.section-title {
+  position: relative;
+  padding-left: 35px;
+  letter-spacing: -0.02em;
+  font-size: 25px;
+}
+#container main .form-container section.languages h2.section-title:before,
+#container main .form-container section.languages h2.section-title:after {
+  position: absolute;
+  left: -35px;
+  top: -8px;
+}
+#container main .form-container section.languages h2.section-title:before {
+  counter-increment: section;
+  content: counter(section);
+  left: -16px;
+  top: 7px;
+  color: #A5ABC5;
+  font-size: 17px;
+  font-weight: 500;
+}
+#container main .form-container section.languages h2.section-title:after {
+  content: '';
+  width: 42px;
+  height: 42px;
+  border: 1px solid #A5ABC5;
+  border-radius: 50%;
+}
+#container main .form-container section.languages .content-wrapper {
+  margin-top: 52px;
+}
+#container main .form-container section.languages .content-wrapper .from,
+#container main .form-container section.languages .content-wrapper .to {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: transparent;
+  font-family: 'ProximaNova';
+  display: inline-block;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
+  padding: 17px 35px;
+  color: #A5ABC5;
+  text-align: center;
+  border: none;
+  width: 15px;
+  margin-bottom: 40px;
+}
+#container main .form-container section.languages .content-wrapper .from .fa,
+#container main .form-container section.languages .content-wrapper .to .fa {
+  font-size: 1.2em;
+}
+#container main .form-container section.languages .content-wrapper .label-dimensions {
+  width: 47px;
+  height: 52px;
+}
+#container main .form-container section.languages .content-wrapper label {
+  position: relative;
+  margin-right: 20px;
+  width: 47px;
+  height: 52px;
+}
+#container main .form-container section.languages .content-wrapper label:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-size: 11px;
+  color: #A5ABC5;
+  right: 8px;
+  top: 4px;
+  padding: 0 0 2px;
+  position: absolute;
+  right: 25px;
+  pointer-events: none;
+}
+#container main .form-container section.languages .content-wrapper label:before {
+  content: '';
+  right: 4px;
+  top: -16px;
+  width: 47px;
+  height: 52px;
+  border-left: 1px solid #D6DCE8;
+  border-right: 1px solid #D6DCE8;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+}
+#container main .form-container section.languages .content-wrapper select {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: transparent;
+  font-family: 'ProximaNova';
+  display: inline-block;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
+  padding: 17px 35px;
+  color: #A5ABC5;
+  text-align: center;
+  background-color: #F7F7FA;
+  width: 200px;
+  text-transform: inherit;
+  font-size: 16px;
+  font-weight: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+#container main .form-container section.languages .content-wrapper select .fa {
+  font-size: 1.2em;
+}
+#container main .form-container section.languages .content-wrapper select option {
+  text-align: left;
+}
+#container main .form-container section.languages .content-wrapper button.add {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: transparent;
+  font-family: 'ProximaNova';
+  display: inline-block;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
+  padding: 17px 35px;
+  color: #A5ABC5;
+  text-align: center;
+  background-color: #F7F7FA;
+  margin-left: 10px;
+}
+#container main .form-container section.languages .content-wrapper button.add .fa {
+  font-size: 1.2em;
+}
+#container main .form-container .tone-and-urgent {
+  margin: 62px 0;
+  display: flex;
+}
+#container main .form-container .tone-and-urgent .left-block {
+  width: 50%;
+}
+#container main .form-container .tone-and-urgent .left-block section.tone .flex-container {
+  margin: 38px 0 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#container main .form-container .tone-and-urgent .left-block section.tone .flex-container .select-tone {
+  width: 235px;
+  margin: 10px;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
+}
+#container main .form-container .tone-and-urgent .left-block section.tone .flex-container .select-tone input {
+  position: absolute;
+  opacity: 0;
+}
+#container main .form-container .tone-and-urgent .left-block section.tone .flex-container .select-tone input:checked + .select-wrapper {
+  border: 5px solid #76A7E1;
+  border-radius: 5px;
+}
+#container main .form-container .tone-and-urgent .left-block section.tone .flex-container .select-tone input:checked + .select-wrapper:before {
+  font-family: 'FontAwesome';
+  content: "\f058";
+  position: absolute;
+  top: -8px;
+  left: 215px;
+  color: #76A7E1;
+  font-size: 24pt;
+  z-index: 2;
+  background-color: #ffffff;
+  line-height: 10pt;
+}
+#container main .form-container .tone-and-urgent .left-block section.tone .flex-container .select-tone .select-wrapper {
+  position: relative;
+  z-index: 1;
+  border: 5px solid transparent;
+  border-radius: 5px;
+  background-color: #F7F7FA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+#container main .form-container .tone-and-urgent .left-block section.tone .flex-container .select-tone .select-wrapper .fa {
+  margin-right: 10px;
+}
+#container main .form-container .tone-and-urgent .left-block section.tone .flex-container .select-tone .select-wrapper span {
+  display: block;
+  margin: 20px;
+  font-size: 17px;
+  font-weight: 500;
+}
+#container main .form-container .tone-and-urgent .right-block {
+  flex-grow: 100;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent input[type=range] {
+  -webkit-appearance: none;
+  width: 400px;
+  margin: 75px 0 0 15px;
+  position: relative;
+  outline: 0;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 20px;
+  background: orange;
+  margin-top: -6px;
+  z-index: 2;
+  position: relative;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent .grey-circle {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #868686;
+  position: absolute;
+  margin: 1px 3px 0 3px;
+  z-index: 1;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent input[type=range]::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #868686;
+  position: absolute;
+  margin: 1px 3px 0 3px;
+  z-index: 1;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent input[type=range]:before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #868686;
+  position: absolute;
+  margin: 1px 3px 0 3px;
+  z-index: 1;
+  right: 0;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 300px;
+  background: #c9c9c9;
+  height: 10px;
+  border-radius: 10px;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent .description {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 13px;
+  margin-bottom: 60px;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent .description .active {
+  color: orange;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent legend.average-info {
+  width: 460px;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
+  padding: 25px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent legend.average-info h3 {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent legend.average-info h3 .fa {
+  margin-right: 10px;
+  font-size: 2em;
+}
+#container main .form-container .tone-and-urgent .right-block section.urgent legend.average-info span {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  color: orange;
+}
+#container main .form-container section.payment {
+  margin-top: 52px;
+}
+#container main .form-container section.payment p {
+  margin: 55px 0 51px 38px;
+}
+#container main .form-container section.payment .input-row {
+  display: flex;
+  margin: 34px 36px;
+}
+#container main .form-container section.payment .input-row .label-input-group {
+  position: relative;
+  margin-right: 30px;
+}
+#container main .form-container section.payment .input-row .label-input-group label {
+  padding-left: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  color: #A5ABC5;
+  display: block;
+  margin-bottom: 10px;
+}
+#container main .form-container section.payment .input-row .label-input-group input {
+  -webkit-appearance: none;
+  border: 1px solid #D6DCE8;
+  border-radius: 5px;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  padding: 14px;
+  color: inherit;
+  background-position: calc(97%);
+  background-repeat: no-repeat;
+}
+#container main .form-container section.payment .input-row .label-input-group input:focus {
+  border: 1px solid #76A7E1;
+}
+#container main .form-container section.payment .input-row .label-input-group input:valid {
+  background-image: url("../img/mark-valid.png");
+}
+#container main .form-container section.payment .input-row .label-input-group input:invalid {
+  background-image: url("../img/mark-invalid.png");
+}
+#container main .form-container section.payment .input-row .label-input-group input::-webkit-input-placeholder {
+  color: black;
+}
+#container main .form-container section.payment .input-row .label-input-group input[type="text"],
+#container main .form-container section.payment .input-row .label-input-group input[type="email"],
+#container main .form-container section.payment .input-row .label-input-group input[type="password"] {
+  width: 270px;
+}
+#container main .form-container section.payment .flex-container {
+  margin: 65px 0 0 24px;
+  display: flex;
+}
+#container main .form-container section.payment .flex-container .select-payment {
+  width: 215px;
+  margin: 10px 20px;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
+}
+#container main .form-container section.payment .flex-container .select-payment input {
+  position: absolute;
+  opacity: 0;
+}
+#container main .form-container section.payment .flex-container .select-payment input:checked + .select-wrapper {
+  border: 5px solid #76A7E1;
+  border-radius: 5px;
+}
+#container main .form-container section.payment .flex-container .select-payment input:checked + .select-wrapper:before {
+  font-family: 'FontAwesome';
+  content: "\f058";
+  position: absolute;
+  top: -8px;
+  left: 195px;
+  color: #76A7E1;
+  font-size: 24pt;
+  z-index: 2;
+  background-color: #ffffff;
+  line-height: 10pt;
+}
+#container main .form-container section.payment .flex-container .select-payment .select-wrapper {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  border: 5px solid transparent;
+  border-radius: 5px;
+  background-color: #F7F7FA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  height: 45px;
+}
+#container main .form-container section.payment .flex-container .select-payment .select-wrapper .fa {
+  margin-right: 10px;
+}
+#container main .form-container section.payment .flex-container .select-payment .select-wrapper img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-45%, 50%);
+}
+#container main .form-container section.payment #card-number {
+  width: 350px;
+  background-image: url("../img/mark-visa.png");
+}
+#container main .form-container section.payment #expiry-date {
+  width: 140px;
+  text-transform: uppercase;
+  text-align: center;
+}
+#container main .form-container section.payment #code {
+  width: 80px;
+}
+#container main .form-container section.payment .payment-method-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 35px 0 50px;
+}
+#container main .form-container section.payment .custom-radiobutton-wrapper {
+  width: 220px;
+}
+#container main .form-container section.payment .label-clickable {
+  height: 100%;
+}
+#container main .form-container section.payment .terms-and-conditions-wrapper {
+  text-align: right;
+  margin-top: 125px;
+  margin-bottom: 75px;
+}
+#container main .form-container section.payment .terms-and-conditions-wrapper label[for="terms-and-conditions"] {
+  display: inline;
+  font-size: 12px;
+  margin-right: 30px;
+}
+#container main .form-container section.payment .terms-and-conditions-wrapper button {
+  margin-right: 30px;
+}
+#container main .form-container section.payment .terms-and-conditions-wrapper .button-gray {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: transparent;
+  font-family: 'ProximaNova';
+  display: inline-block;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
+  padding: 17px 35px;
+  color: #A5ABC5;
+  text-align: center;
+  background-color: #F7F7FA;
+}
+#container main .form-container section.payment .terms-and-conditions-wrapper .button-gray .fa {
+  font-size: 1.2em;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+}
+footer {
+  margin-top: 125px;
+  padding: 110px 0;
+  width: 100%;
+  background: #444a62;
+}
+footer section {
+  width: 25%;
+}
+footer .section-title {
+  position: relative;
+  margin-bottom: 15px;
+}
+footer .section-title i {
+  position: absolute;
+  left: -40px;
+  top: -5px;
+  font-size: 22px;
+}
+footer .info {
+  padding-left: 40px;
+  max-width: 250px;
+}
+footer .info p {
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 300;
+  font-style: italic;
+}
+footer .address-section {
+  padding-left: 80px;
+}
+footer address {
+  font-size: 12px;
+  font-style: normal;
+  line-height: 2;
+  font-weight: 300;
+}
+footer address a {
+  text-decoration: none;
+  color: #A5ABC5;
+  font-weight: 500;
+}
+footer .social-media {
+  padding-left: 60px;
+}
+footer .social-media li {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 2;
+}
+footer .social-media i {
+  padding-right: 15px;
+}
+footer .social-media a {
+  text-decoration: none;
+  color: #A5ABC5;
+  font-weight: 500;
 }
