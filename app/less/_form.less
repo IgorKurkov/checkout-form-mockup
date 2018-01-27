@@ -13,6 +13,12 @@ h2.section-title {
   color: #fff;
   font-size: 12px;
   letter-spacing: 0.08em;
+  &:hover {
+    background-color: darken(@action-color, 15%);
+  }
+  &:active {
+    background-color: darken(@action-color, 30%);
+  }
 }
 
 .form-container {
@@ -28,12 +34,15 @@ h2.section-title {
   .tone-and-urgent {
     margin: 62px 0;
     display: flex;
+
     .left-block {
       width: 50%;
+
       @import 'form/3_tone';
     }
     .right-block {
       flex-grow: 100;
+
       @import 'form/4_urgent';
     }
   }

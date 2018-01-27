@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   border-bottom: 1px solid @border-color;
-  // border-radius: 3px;
 
   .order-summary.left {
     padding: 28px 0px 0px 38px;
@@ -77,6 +76,12 @@
         color: @font-color;
         margin-right: 15px;
         font-weight: 500;
+        &:hover {
+          color: darken(@font-color, 10%);
+        }
+        &:active {
+          color: darken(@font-color, 20%);
+        }
       }
     }
   }

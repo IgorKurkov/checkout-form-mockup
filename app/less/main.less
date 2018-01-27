@@ -3,7 +3,6 @@
 @import 'inc/_mixins';
 @import 'inc/_fonts';
 
-
 body {
   background-color: @body-color;
   padding-top: 4rem;
@@ -16,12 +15,26 @@ body {
     opacity: .1;
     width: 100px;
     height: auto;
+    &:hover {
+      opacity: .2;
+    }
+    &:active {
+      opacity: .3;
+    }
   }    
 } 
+input, button {
+  cursor: pointer;
+  &:hover {
+    background-color: @border-color-light;
+  }
+}
 
 .button {
   .button-regular;
 }
+
+
 
 #container {
   width: 90%;
@@ -31,13 +44,9 @@ body {
   @import '_header';
 
   main {
-    border: 1px solid @border-color;
-    border-radius: 3px;
+    .border-and-radius;
     @import '_order-section';
     @import '_form';
   }
-
-
-
 }
 @import '_footer';

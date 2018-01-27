@@ -143,6 +143,10 @@ table {
 .uppercase {
   text-transform: uppercase;
 }
+.border-and-radius {
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
+}
 .text-upper-bold-13 {
   text-transform: uppercase;
   font-size: 13px;
@@ -154,20 +158,32 @@ table {
   font-size: 12px;
   letter-spacing: 0.08em;
 }
+.btn-action:hover {
+  background-color: #37a6a1;
+}
+.btn-action:active {
+  background-color: #246c69;
+}
 .button-regular {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 1px solid #D6DCE8;
-  border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
   text-align: center;
+}
+.button-regular:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.button-regular:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .button-regular .fa {
   font-size: 1.2em;
@@ -176,20 +192,32 @@ table {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 1px solid #D6DCE8;
-  border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
   text-align: center;
   background-color: #F7F7FA;
 }
+.button-gray:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.button-gray:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 .button-gray .fa {
   font-size: 1.2em;
+}
+.button-gray:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.button-gray:active {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 .button-icons {
   border: none;
@@ -262,7 +290,13 @@ table {
 }
 @font-face {
   font-family: "ProximaNova";
-  src: url("../fonts/ProximaNova/ProximaNova-Bold.otf") format("otf");
+  src: url("../fonts/ProximaNova/Proxima Nova Regular.otf") format("opentype");
+  /* url("../fonts/OpenSans-Regular-webfont.woff") format("woff"); */
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova/Proxima Nova Semibold.otf") format("opentype");
+  font-weight: 500;
   /* url("../fonts/OpenSans-Regular-webfont.woff") format("woff"); */
 }
 body {
@@ -277,20 +311,40 @@ body {
   width: 100px;
   height: auto;
 }
+.logo img:hover {
+  opacity: .2;
+}
+.logo img:active {
+  opacity: .3;
+}
+input,
+button {
+  cursor: pointer;
+}
+input:hover,
+button:hover {
+  background-color: #F5F6F8;
+}
 .button {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 1px solid #D6DCE8;
-  border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
   text-align: center;
+}
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.button:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .button .fa {
   font-size: 1.2em;
@@ -315,16 +369,24 @@ body {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 1px solid #D6DCE8;
-  border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
   text-align: center;
+}
+#container header nav .back:hover,
+#container header nav .sign:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#container header nav .back:active,
+#container header nav .sign:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 #container header nav .back .fa,
 #container header nav .sign .fa {
@@ -432,6 +494,12 @@ body {
   margin-right: 15px;
   font-weight: 500;
 }
+#container main .order-section .address.right address a:hover {
+  color: #868eb1;
+}
+#container main .order-section .address.right address a:active {
+  color: #67719d;
+}
 #container main button.remove {
   border: none;
   background-color: transparent;
@@ -495,6 +563,12 @@ body {
   font-size: 12px;
   letter-spacing: 0.08em;
 }
+#container main .btn-action:hover {
+  background-color: #37a6a1;
+}
+#container main .btn-action:active {
+  background-color: #246c69;
+}
 #container main .form-container {
   position: relative;
   margin: 0 auto;
@@ -552,6 +626,12 @@ body {
   align-items: center;
   cursor: pointer;
 }
+#container main .form-container section.selectable .flex-container .select-type .select-wrapper:hover {
+  background-color: #f1f1f6;
+}
+#container main .form-container section.selectable .flex-container .select-type .select-wrapper:active {
+  background-color: #e7e7f0;
+}
 #container main .form-container section.selectable .flex-container .select-type .select-wrapper img {
   width: 95px;
   margin: 30px auto 0;
@@ -577,11 +657,15 @@ body {
   display: inline-block;
 }
 #container main .form-container section.uploadable .upload-btn-wrapper button.upload {
-  background-color: #F7F7FA;
   display: block;
+  width: 100%;
   text-transform: inherit;
   font-size: 17px;
   letter-spacing: -0.04em;
+  background-color: #F7F7FA;
+}
+#container main .form-container section.uploadable .upload-btn-wrapper button.upload:hover {
+  color: #F7F7FA;
 }
 #container main .form-container section.uploadable .upload-btn-wrapper button.upload .fa {
   margin-right: 12px;
@@ -595,7 +679,7 @@ body {
 }
 #container main .form-container section.uploadable .table-wrapper {
   border: 1px solid #D6DCE8;
-  border-radius: 5px;
+  border-radius: 3px;
   margin: 35px 10px 0 35px;
 }
 #container main .form-container section.uploadable table.uploaded-files-table {
@@ -686,19 +770,27 @@ body {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 1px solid #D6DCE8;
-  border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
   text-align: center;
   border: none;
   width: 15px;
   margin-bottom: 40px;
+}
+#container main .form-container section.languages .content-wrapper .from:hover,
+#container main .form-container section.languages .content-wrapper .to:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#container main .form-container section.languages .content-wrapper .from:active,
+#container main .form-container section.languages .content-wrapper .to:active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 #container main .form-container section.languages .content-wrapper .from .fa,
 #container main .form-container section.languages .content-wrapper .to .fa {
@@ -742,13 +834,13 @@ body {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 1px solid #D6DCE8;
-  border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
   text-align: center;
@@ -762,8 +854,20 @@ body {
   cursor: pointer;
   overflow: hidden;
 }
+#container main .form-container section.languages .content-wrapper select:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#container main .form-container section.languages .content-wrapper select:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 #container main .form-container section.languages .content-wrapper select .fa {
   font-size: 1.2em;
+}
+#container main .form-container section.languages .content-wrapper select:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#container main .form-container section.languages .content-wrapper select:active {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 #container main .form-container section.languages .content-wrapper select option {
   text-align: left;
@@ -772,21 +876,33 @@ body {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 1px solid #D6DCE8;
-  border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
   text-align: center;
   background-color: #F7F7FA;
   margin-left: 10px;
 }
+#container main .form-container section.languages .content-wrapper button.add:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#container main .form-container section.languages .content-wrapper button.add:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 #container main .form-container section.languages .content-wrapper button.add .fa {
   font-size: 1.2em;
+}
+#container main .form-container section.languages .content-wrapper button.add:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#container main .form-container section.languages .content-wrapper button.add:active {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 #container main .form-container .tone-and-urgent {
   margin: 62px 0;
@@ -831,11 +947,17 @@ body {
   z-index: 1;
   border: 5px solid transparent;
   border-radius: 5px;
-  background-color: #F7F7FA;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  background-color: #F7F7FA;
+}
+#container main .form-container .tone-and-urgent .left-block section.tone .flex-container .select-tone .select-wrapper:hover {
+  background-color: #f1f1f6;
+}
+#container main .form-container .tone-and-urgent .left-block section.tone .flex-container .select-tone .select-wrapper:active {
+  background-color: #e7e7f0;
 }
 #container main .form-container .tone-and-urgent .left-block section.tone .flex-container .select-tone .select-wrapper .fa {
   margin-right: 10px;
@@ -947,6 +1069,15 @@ body {
 #container main .form-container section.payment {
   margin-top: 52px;
 }
+#container main .form-container section.payment a.sign {
+  padding-left: 10px;
+  color: #A5ABC5;
+  font-weight: 500;
+  text-decoration: none;
+}
+#container main .form-container section.payment a.sign:hover {
+  color: #67719d;
+}
 #container main .form-container section.payment p {
   margin: 55px 0 51px 38px;
 }
@@ -970,12 +1101,12 @@ body {
 #container main .form-container section.payment .input-row .label-input-group input {
   -webkit-appearance: none;
   border: 1px solid #D6DCE8;
-  border-radius: 5px;
+  border-radius: 3px;
   font-size: 15px;
   letter-spacing: 0.05em;
   padding: 14px;
   color: inherit;
-  background-position: calc(97%);
+  background-position: calc(95%);
   background-repeat: no-repeat;
 }
 #container main .form-container section.payment .input-row .label-input-group input:focus {
@@ -1038,6 +1169,12 @@ body {
   cursor: pointer;
   height: 45px;
 }
+#container main .form-container section.payment .flex-container .select-payment .select-wrapper:hover {
+  background-color: #f1f1f6;
+}
+#container main .form-container section.payment .flex-container .select-payment .select-wrapper:active {
+  background-color: #e7e7f0;
+}
 #container main .form-container section.payment .flex-container .select-payment .select-wrapper .fa {
   margin-right: 10px;
 }
@@ -1054,6 +1191,9 @@ body {
   width: 140px;
   text-transform: uppercase;
   text-align: center;
+}
+#container main .form-container section.payment #expiry-date::placeholder {
+  color: #A5ABC5;
 }
 #container main .form-container section.payment #code {
   width: 80px;
@@ -1086,20 +1226,32 @@ body {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
+  border: 1px solid #D6DCE8;
+  border-radius: 3px;
   background-color: transparent;
   font-family: 'ProximaNova';
   display: inline-block;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 1px solid #D6DCE8;
-  border-radius: 3px;
   padding: 17px 35px;
   color: #A5ABC5;
   text-align: center;
   background-color: #F7F7FA;
 }
+#container main .form-container section.payment .terms-and-conditions-wrapper .button-gray:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#container main .form-container section.payment .terms-and-conditions-wrapper .button-gray:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 #container main .form-container section.payment .terms-and-conditions-wrapper .button-gray .fa {
   font-size: 1.2em;
+}
+#container main .form-container section.payment .terms-and-conditions-wrapper .button-gray:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#container main .form-container section.payment .terms-and-conditions-wrapper .button-gray:active {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 .footer-container {
   display: flex;
@@ -1133,7 +1285,7 @@ footer .info {
 footer .info p {
   font-size: 12px;
   line-height: 1.4;
-  font-weight: 300;
+  font-weight: 500;
   font-style: italic;
 }
 footer .address-section {
@@ -1143,7 +1295,7 @@ footer address {
   font-size: 12px;
   font-style: normal;
   line-height: 2;
-  font-weight: 300;
+  font-weight: 500;
 }
 footer address a {
   text-decoration: none;
@@ -1155,7 +1307,7 @@ footer .social-media {
 }
 footer .social-media li {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 2;
 }
 footer .social-media i {

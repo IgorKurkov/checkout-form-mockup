@@ -16,8 +16,7 @@ section.selectable {
     justify-content: space-around;
     .select-type {
       width: 280px;
-      border: 1px solid @border-color;
-      border-radius: 3px;
+      .border-and-radius;
       input {
         position: absolute;
         opacity: 0;
@@ -51,6 +50,12 @@ section.selectable {
         flex-direction: column;
         align-items: center;
         cursor: pointer;
+        &:hover {
+          background-color:  darken(@main-gray-color, 2%);
+        }
+        &:active {
+          background-color:  darken(@main-gray-color, 5%);
+        }
         img {
           width: 95px;
           margin: 30px auto 0;

@@ -12,12 +12,17 @@ section.uploadable {
     position: relative;
     overflow: hidden;
     display: inline-block;
+    
     button.upload {
-      background-color: @main-gray-color;
       display: block;
+      width: 100%;
       text-transform: inherit;
       font-size: 17px;
       letter-spacing: -0.04em;
+      background-color: @main-gray-color;
+      &:hover {
+        color: @main-gray-color;
+      }
       .fa {
         margin-right: 12px;
       }
@@ -31,8 +36,7 @@ section.uploadable {
     }
   }
   .table-wrapper {
-    border: 1px solid @border-color;
-    border-radius: 5px;
+    .border-and-radius;
     margin: 35px 10px 0 35px;
 
   }

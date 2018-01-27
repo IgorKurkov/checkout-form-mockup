@@ -8,9 +8,10 @@ var gulp        = require('gulp'),
     rename      = require('gulp-rename'),
     uglify      = require('gulp-uglify'),
     concat      = require("gulp-concat"),
-    gulpCopy    = require('gulp-copy');
+    gulpCopy    = require('gulp-copy'),
+    del         = require('del');
 ///////////////////////////////
-// npm i --save-dev gulp browser-sync gulp-notify gulp-less gulp-cssmin path gulp-rename gulp-uglify gulp-concat gulp-copy
+// npm i --save-dev gulp del browser-sync gulp-notify gulp-less gulp-cssmin path gulp-rename gulp-uglify gulp-concat gulp-copy
 
     
 gulp.task("start-server", () => {
@@ -25,7 +26,7 @@ gulp.task("reload", () => {
 
 gulp.task('less', () => {
   // return gulp.src('app/less/**/*.less')
-  return gulp.src('app/less/styles.less')
+  return gulp.src('app/less/main.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }).on("error", notify.onError()))
@@ -49,30 +50,36 @@ gulp.task("default", ["less", "start-server"], () => {
 ///build
 gulp.task('build-html', function() {
   return gulp.src('app/index.html')
-      .pipe(change((content) => {
-        return content.replace(/type\=\"module\"/g, '');
-        }))
       .pipe(gulp.dest('dist/'))
 });
 
-gulp.task('build-css', function() {
+gulp.task('build-css', ["less"], function() {
   return gulp.src([
     'app/css/**/*.css',  
   ])
-  .pipe(concat('styles.min.css'))
+  .pipe(concat('main.min.css'))
   .pipe(cssmin())
   .pipe(gulp.dest('dist/css/'))
 });
 
-gulp.task('build-libs', function() {
-return gulp.src('app/libs/**/*')
+gulp.task('build-img', function() {
+return gulp.src('app/img/**/*')
     .pipe(gulpCopy('dist/', {prefix: 1}))
-    .pipe(gulp.dest('dist/libs/'));
+    .pipe(gulp.dest('dist/img/'));
   });
 
+gulp.task('build-fonts', function() {
+  return gulp.src('app/fonts/**/*')
+      .pipe(gulpCopy('dist/', {prefix: 1}))
+      .pipe(gulp.dest('dist/fonts/'));
+    });
 
-gulp.task('build-all', ['build-libs', 'build-html', 'build-css'], () => {
-  sleep(1);
+gulp.task('clean', function(){
+      return del(['dist/**', '!dist'], {force:true});
+ });
+
+gulp.task('build-all', ['clean', 'build-fonts', 'build-img', 'build-html', 'build-css'], () => {
+  
 });
 
 
