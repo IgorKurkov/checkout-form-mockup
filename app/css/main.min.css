@@ -646,7 +646,7 @@ button:hover {
   padding: 55px 0;
   /* https://codepen.io/adambene/pen/xRWrXN */
 }
-#container main .form-container section.uploadable .section-title-filetypes {
+#container main .form-container section.uploadable small {
   font-size: 13px;
   margin-left: 10px;
 }
@@ -671,6 +671,7 @@ button:hover {
   margin-right: 12px;
 }
 #container main .form-container section.uploadable .upload-btn-wrapper input#upload {
+  width: 100%;
   font-size: 100px;
   position: absolute;
   left: 0;
