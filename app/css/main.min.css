@@ -1061,7 +1061,7 @@ button:hover {
   margin-right: 10px;
   font-size: 2em;
 }
-#container main .form-container .tone-and-urgent .right-block section.urgent legend.average-info span {
+#container main .form-container .tone-and-urgent .right-block section.urgent legend.average-info span.upper {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
