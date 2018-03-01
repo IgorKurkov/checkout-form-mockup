@@ -300,6 +300,7 @@ table {
   /* url("../fonts/OpenSans-Regular-webfont.woff") format("woff"); */
 }
 body {
+  width: 100%;
   background-color: #eceef4;
   padding-top: 4rem;
   font-family: 'ProximaNova';
@@ -422,7 +423,7 @@ button:hover {
   margin-right: 10px;
 }
 #container main .order-section .order-summary.left table {
-  width: 80%;
+  width: 70%;
   padding: 53px 0 0 35px;
   text-align: left;
   top: 53px;
@@ -451,10 +452,12 @@ button:hover {
   width: 30%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 30px;
+  padding: 0 0 0 20px;
 }
 #container main .order-section .order-summary.left .actions-right .button {
-  min-width: 180px;
+  min-width: 170px;
+  height: 55px;
+  padding: 0;
   margin-bottom: 10px;
   font-size: 12px;
   letter-spacing: 0.08em;
