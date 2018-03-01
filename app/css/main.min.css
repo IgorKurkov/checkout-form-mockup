@@ -1141,6 +1141,7 @@ button:hover {
   margin: 10px 20px;
   border: 1px solid #D6DCE8;
   border-radius: 3px;
+  border-radius: 6px;
 }
 #container main .form-container section.payment .flex-container .select-payment input {
   position: absolute;
